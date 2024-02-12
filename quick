@@ -35,8 +35,8 @@ import { TableDemo } from './table';
 const ResizableTab = () => {
   return (
     <ResizablePanelGroup direction="horizontal">
-       <ResizablePanel className="max-w-[220px]">
-        
+       <ResizablePanel className="max-w-[220px] fixed h-screen overflow-y-auto">
+       <div className="fixed h-screen overflow-y-auto max-w-[220px]">
       <div className="mt-4"> {/* Added mt-4 for top margin */}
   <div className="flex items-center space-x-4 pl-4"> {/* Added pl-4 for left padding */}
   <Image src="/logo.png" alt="Logo" width={20} height={20} className="ml2" /> {/* Added ml-4 for left margin */}
@@ -86,22 +86,25 @@ const ResizableTab = () => {
     <p className="ml-2">Microsoft Excel</p> {/* Added ml-2 for left margin */}
   </div>
   
-  
+  </div>
   
       </ResizablePanel>
       <ResizableHandle withHandle />
       <ResizablePanel>
         {/* Add your tab content here */}
+        <div className="pl-[220px]"> {/* Adjust the left padding based on your tab width */}
+     
         <div className="border border-black rounded-lg p-4">
         <div className="flex items-center justify-between mb-4">
         <div className="flex items-center">
         <h1 className="font-bold text-xl mr-4 ml-4">General Aptitude</h1>
         <div className="flex items-center">
         <button id="activeButton" className="flex items-center bg-white hover:bg-blue-700 text-black font-bold py-1 px-3 rounded-full border border-black">
-  <img src="./greendot.png" alt="Green Dot Logo" className="w-4 h-4 mr-1" />
+  <img src="./greendot.png" alt="Green Dot Logo" className="w-2 h-2 mr-1" />
   Active
-  <img src="./down.png" alt="Down Icon Logo" className="w-4 h-4 ml-1" />
+  <img src="./down.png" alt="Down Icon Logo" className="w-3 h-3 ml-1" />
 </button>
+
 
 </div>
 
@@ -203,33 +206,57 @@ const ResizableTab = () => {
 
 
 
+<div className="mt-4">
+  {/* Top Row */}
+  <div className="flex items-center justify-between px-4">
+    <h5 className="text-lg font-bold">Candidate details</h5>
+  </div>
 
-     <div className='space-x-4 pl-4 mt-4'>
-      <h5><b>Candidate details</b></h5>
-      <div className="flex mt-4">
-  <button className="bg-gray-200 text-black px-3 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none">
-    <span className="text-base">Top Performance</span>
-  </button>
-  <div className="mx-2"></div> {/* Space between buttons */}
-  <button className="bg-green-600 text-white px-3 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none">
-  <span className="text-base">All Applicants</span>
-</button>
+  {/* Second Row */}
+  <div className="flex items-center mt-4 px-4">
+    {/* Your existing buttons */}
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Top Performance</span>
+    </button>
 
-  <div className="mx-2"></div> {/* Space between buttons */}
-  <button className="bg-gray-200 text-black px-3 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none">
-    <span className="text-base">Shortlisted</span>
-  </button>
-  <div className="mx-2"></div> {/* Space between buttons */}
-  <button className="bg-gray-200 text-black px-3 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none">
-    <span className="text-base">Selected</span>
-  </button>
+    <button className="bg-green-600 text-white px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">All Applicants</span>
+    </button>
+
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Shortlisted</span>
+    </button>
+
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Selected</span>
+    </button>
+
+    {/* Search Logo */}
+    <img src="/search.png" alt="Search Logo" className="ml-auto w-3 h-3 text-gray-500 mr-1" />
+
+{/* Search Text with spacing */}
+<span className="text-sm text-gray-500 mr-4 px-2">Search</span>
+<button className="bg-white-100 text-gray-700 border border-gray-300 mr-4 px-2 py-1 rounded-full hover:bg-gray-200 focus:outline-none ml-2 flex items-center">
+      <img src="/clock.png" alt="Clock Logo" className="w-3 h-3 mr-1" />
+      <span className="text-xs">27 Sep'22 - 29 Sep'22</span>
+    </button>
+
+    <span className="text-xs text-gray-500 mr-4">Sort</span>
+  </div>
 </div>
-
-      <Checkbox />
+<Checkbox />
 
      <TableDemo/>
+</div>
+
+
+
+
+
+
+      
      </div>
-      </div>
+      
       
      
       </ResizablePanel>
@@ -247,6 +274,7 @@ export default function Example() {
     </div>
   );
 }
+
 
 
 
