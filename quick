@@ -438,25 +438,25 @@ const ResizableTab = () => {
 
 <div className="flex items-center space-x-4 pl-4 mt-8"> {/* Added mt-2 for extra top margin */}
    
-   <p className="ml-2">ACTIVE TESTS</p> {/* Added ml-2 for left margin */}
+   <p className="ml-2 text-sm">ACTIVE TESTS</p> {/* Added ml-2 for left margin */}
  </div>
   
   <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
    
-    <b className="ml-2">General Aptitude</b> {/* Added ml-2 for left margin */}
+    <b className="ml-2 ">General Aptitude</b> {/* Added ml-2 for left margin */}
   </div>
 
   <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
    
-   <p className="ml-2">Basic Math</p> {/* Added ml-2 for left margin */}
+   <p className="ml-2 text-sm">Basic Math</p> {/* Added ml-2 for left margin */}
  </div>
  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
    
-    <p className="ml-2">Logical Reasoning</p> {/* Added ml-2 for left margin */}
+    <p className="ml-2 text-sm">Logical Reasoning</p> {/* Added ml-2 for left margin */}
   </div>
   <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
    
-    <p className="ml-2">Microsoft Excel</p> {/* Added ml-2 for left margin */}
+    <p className="ml-2 text-sm">Microsoft Excel</p> {/* Added ml-2 for left margin */}
   </div>
   
   </div>
@@ -500,20 +500,20 @@ const ResizableTab = () => {
 
         </div>
         </div>
-        <div className="flex mb-4 mt-45" style={{ borderTopWidth: '25px', borderColor: 'transparent' }}>
+        <div className="flex mb-4 mt-45" style={{ borderTopWidth: '20px', borderColor: 'transparent' }}>
   <nav>
     <a href="#" className="nav-link">Overview</a>
-    <span className="nav-divider mx-2"></span>
-    <a href="#" className="nav-link ml-10">Add Questions</a> {/* Adjusted margin here */}
-    <span className="nav-divider mx-2"></span>
-    <a href="#" className="nav-link ml-10">Time Instruction</a> {/* Added same margin as Add Questions */}
-    <span className="nav-divider mx-2"></span>
-    <a href="#" className="nav-link ml-10">Candidate Information</a> {/* Added same margin as Add Questions */}
-    <span className="nav-divider mx-2"></span>
-    <a href="#" className="nav-link ml-10">Result</a> {/* Added same margin as Add Questions */}
+    <span className="nav-divider mx-2"></span> {/* Decreased margin here */}
+    <a href="#" className="nav-link ml-4">Add Questions</a> {/* Adjusted margin here */}
+    <span className="nav-divider mx-2"></span> {/* Decreased margin here */}
+    <a href="#" className="nav-link ml-4">Time Instruction</a> {/* Added same margin as Add Questions */}
+    <span className="nav-divider mx-2"></span> {/* Decreased margin here */}
+    <a href="#" className="nav-link ml-4">Candidate Information</a> {/* Added same margin as Add Questions */}
+    <span className="nav-divider mx-2"></span> {/* Decreased margin here */}
+    <a href="#" className="nav-link ml-4 text-green-900">Result</a>
   </nav>
-  
 </div>
+
 <div className="border-b border-black"></div>
 
        
@@ -637,4 +637,5 @@ export default function Example() {
     </div>
   );
 }
+
 
