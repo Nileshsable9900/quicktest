@@ -361,3 +361,280 @@ src/app/
 page.tsx
 table.tsx
 gloval.tsx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+page.txs  12/02/24
+
+import Image from 'next/image';
+
+import { Checkbox } from "@/components/ui/checkbox"
+
+
+import {
+  ResizableHandle,
+  ResizablePanel,
+  ResizablePanelGroup,
+} from "@/components/ui/resizable";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+
+import { TableDemo } from './table';
+
+
+const ResizableTab = () => {
+  return (
+    <ResizablePanelGroup direction="horizontal">
+     <ResizablePanel className="max-w-[180px] fixed h-screen overflow-y-auto"> {/* Adjusted max-width */}
+
+     <div className="fixed h-screen overflow-y-auto max-w-[200px]"> {/* Adjusted max-width */}
+      <div className="mt-4"> {/* Added mt-4 for top margin */}
+  <div className="flex items-center space-x-4 pl-4"> {/* Added pl-4 for left padding */}
+  <Image src="/logo.png" alt="Logo" width={20} height={20} className="ml2" /> {/* Added ml-4 for left margin */}
+
+    
+    <Image src="/quicktest.png" alt="Logo" width={100} height={80} />
+  </div>
+
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+    <Image src="/layout-grid.png" alt="Logo" width={20} height={20} />
+    <p className="ml-2">Home</p> {/* Added ml-2 for left margin */}
+  </div>
+
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+    <Image src="/file-text.png" alt="Logo" width={20} height={20} />
+    <p className="ml-2">Tests</p> {/* Added ml-2 for left margin */}
+  </div>
+
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+    <Image src="/user.png" alt="Logo" width={20} height={20} />
+    <p className="ml-2">Profile</p> {/* Added ml-2 for left margin */}
+  </div>
+</div>
+<div className="border-b border-black mt-32  ml-5 mr-30"></div>
+
+{/* <div className="border-b border-black"></div> */}
+
+<div className="flex items-center space-x-4 pl-4 mt-8"> {/* Added mt-2 for extra top margin */}
+   
+   <p className="ml-2">ACTIVE TESTS</p> {/* Added ml-2 for left margin */}
+ </div>
+  
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+   
+    <b className="ml-2">General Aptitude</b> {/* Added ml-2 for left margin */}
+  </div>
+
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+   
+   <p className="ml-2">Basic Math</p> {/* Added ml-2 for left margin */}
+ </div>
+ <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+   
+    <p className="ml-2">Logical Reasoning</p> {/* Added ml-2 for left margin */}
+  </div>
+  <div className="flex items-center space-x-4 pl-4 mt-4"> {/* Added mt-2 for extra top margin */}
+   
+    <p className="ml-2">Microsoft Excel</p> {/* Added ml-2 for left margin */}
+  </div>
+  
+  </div>
+  
+      </ResizablePanel>
+      <ResizableHandle withHandle />
+      <ResizablePanel>
+        {/* Add your tab content here */}
+        <div className="pl-[180px]"> {/* Adjust the left padding based on your tab width */}
+     
+        <div className="border border-black rounded-lg p-4">
+        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center">
+        <h1 className="font-bold text-base mr-2 ml-2">General Aptitude</h1>
+        <div className="flex items-center">
+        <button id="activeButton" className="flex items-center bg-white hover:bg-blue-700 text-black font-bold text-sm py-1 px-2 rounded-full border border-black"> {/* Adjusted padding */}
+  <img src="./greendot.png" alt="Green Dot Logo" className="w-2 h-2 mr-1" />
+  Active
+  <img src="./down.png" alt="Down Icon Logo" className="w-2 h-2 ml-1" /> {/* Adjusted margin */}
+</button>
+
+
+</div>
+</div>
+
+        <div>
+        <div>
+  <button className="bg-white px-3 py-1 rounded-l-full rounded-r-full border border-green-900 hover:bg-green-600 hover:text-white focus:outline-none mr-2"> {/* Adjusted padding */}
+    <span className="text-xs text-green-900">Preview Questions</span> {/* Adjusted font size */}
+  </button>
+
+  <button className="bg-green-600 text-white px-3 py-1 rounded-l-full rounded-r-full border border-black hover:bg-green-700 hover:text-white focus:outline-none mr-2"> {/* Adjusted padding */}
+    <span className="text-xs">Share Test Link</span> {/* Adjusted font size */}
+  </button>
+</div>
+
+
+
+
+
+
+        </div>
+        </div>
+        <div className="flex mb-4 mt-45" style={{ borderTopWidth: '25px', borderColor: 'transparent' }}>
+  <nav>
+    <a href="#" className="nav-link">Overview</a>
+    <span className="nav-divider mx-2"></span>
+    <a href="#" className="nav-link ml-10">Add Questions</a> {/* Adjusted margin here */}
+    <span className="nav-divider mx-2"></span>
+    <a href="#" className="nav-link ml-10">Time Instruction</a> {/* Added same margin as Add Questions */}
+    <span className="nav-divider mx-2"></span>
+    <a href="#" className="nav-link ml-10">Candidate Information</a> {/* Added same margin as Add Questions */}
+    <span className="nav-divider mx-2"></span>
+    <a href="#" className="nav-link ml-10">Result</a> {/* Added same margin as Add Questions */}
+  </nav>
+  
+</div>
+<div className="border-b border-black"></div>
+
+       
+
+
+
+
+
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 space-x-4 pl-2 mt-2">
+  <Card>
+    <CardDescription className="mt-1 mb-1 px-2 py-1 text-xs">Total Applicants</CardDescription>
+    <CardContent>
+      <p className="text-lg mt-1">1,239</p>
+    </CardContent>
+    <CardFooter className="flex items-center">
+      <img src="./icon.png" alt="Logo" className="w-4 h-4 mr-2" /> {/* Small logo */}
+      <p className="text-xs">210 this week</p> {/* Text */}
+    </CardFooter>
+  </Card>
+
+  <Card>
+    <CardDescription className="mt-1 mb-1 px-2 py-1 text-xs">Total Applicants Cleared</CardDescription>
+    <CardContent>
+    <p className="text-lg mt-1 text-black">322</p>
+
+    </CardContent>
+    <CardFooter className="flex items-center">
+      <img src="./icon.png" alt="Logo" className="w-4 h-4 mr-2" /> {/* Small logo */}
+      <p className="text-xs">59 this week</p> {/* Text */}
+    </CardFooter>
+  </Card>
+
+  <Card>
+    <CardDescription className="mt-1 mb-1 px-2 py-1 text-xs">Total Questions</CardDescription>
+    <CardContent>
+      <p className="text-lg mt-1">10 Questions</p>
+    </CardContent>
+    <CardFooter>
+      <p className="text-xs">3 sections</p> {/* Text */}
+    </CardFooter>
+  </Card>
+
+  <Card>
+    <CardDescription className="mt-1 mb-1 px-2 py-1 text-xs">Time Limit</CardDescription>
+    <CardContent>
+      <p className="text-lg mt-1">20 Mins</p>
+    </CardContent>
+    <CardFooter>
+      <p></p>
+    </CardFooter>
+  </Card>
+</div>
+
+
+
+<div className="mt-4">
+  {/* Top Row */}
+  <div className="flex items-center justify-between px-4">
+    <h5 className="text-lg font-bold">Candidate details</h5>
+  </div>
+
+  {/* Second Row */}
+  <div className="flex items-center mt-4 px-4">
+    {/* Your existing buttons */}
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Top Performance</span>
+    </button>
+
+    <button className="bg-green-600 text-white px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">All Applicants</span>
+    </button>
+
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Shortlisted</span>
+    </button>
+
+    <button className="bg-gray-200 text-black px-4 py-1 rounded-full border border-transparent hover:bg-gray-300 hover:text-white focus:outline-none ml-2">
+      <span className="text-xs">Selected</span>
+    </button>
+
+    {/* Search Logo */}
+    <img src="/search.png" alt="Search Logo" className="ml-auto w-3 h-3 text-gray-500 mr-1" />
+
+{/* Search Text with spacing */}
+<span className="text-sm text-gray-500 mr-4 px-2">Search</span>
+<button className="bg-white-100 text-gray-700 border border-gray-300 mr-4 px-2 py-1 rounded-full hover:bg-gray-200 focus:outline-none ml-2 flex items-center">
+      <img src="/clock.png" alt="Clock Logo" className="w-3 h-3 mr-1" />
+      <span className="text-xs">27 Sep'22 - 29 Sep'22</span>
+    </button>
+
+    <span className="text-xs text-gray-500 mr-4">Sort</span>
+  </div>
+</div>
+<Checkbox />
+
+     <TableDemo/>
+</div>
+
+
+
+
+
+
+      
+     </div>
+      
+      
+     
+      </ResizablePanel>
+    </ResizablePanelGroup>
+  );
+};
+
+export default function Example() {
+  return (
+    <div>
+      <ResizableTab />
+      
+     
+      
+    </div>
+  );
+}
+
